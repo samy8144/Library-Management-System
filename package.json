@@ -1,9 +1,4 @@
 {
-"scripts": {
-  "start": "node index.js"
-}
-
-{
   "name": "library-management-system",
   "version": "1.0.0",
   "description": "A library management system built with Node.js and Express",
@@ -20,5 +15,4 @@
   "devDependencies": {
     "nodemon": "3.1.9"
   }
-}
 }
