@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>localhost</title>
+
+    <style>
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: rgb(250, 250, 250);
+}
+
+form {
+    background-color: #ffffff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    animation: fadeIn 1s ease-in-out;
+}
+
+
+h2 {
+    text-align: top;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    animation: slideIn 1s ease-in-out;
+}
+
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+input:focus {
+    outline: none;
+    border-color: #e4e066;
+    box-shadow: 0 0 8px rgba(172, 228, 20, 0.425);
+}
+
+
+input[type="submit"] {
+    background-color: #bcc4b3;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.1s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #626ee0;
+    transform: scale(1.05);
+}
+
+input[type="submit"]:active {
+    background-color: #1a00a3;
+    transform: scale(0.95);
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 2;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <h2></h2>
+    <form action="/borrow" method="post" >
+
+        <p>enter book details to be borrowed</p>
+    
+            <input class = input name="book_id" type="number" placeholder="Enter book id" required >
+            
+            <br>
+    <input class = input name="user_id" type="text" placeholder="Enter user id" required >
+    
+    
+    <br>
+
+    <input class = input name="borrow_date" type="datetime-local" placeholder="Enter borrow date" required >
+    
+<br>
+
+<input type="submit">
+</form>    
+
+
+    
+</body>
+</html>
