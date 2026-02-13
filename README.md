@@ -1,105 +1,118 @@
+# Library Management System
+
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![Node.js](https://img.shields.io/badge/Node.js-22.x-green?logo=node.js)
 ![Express.js](https://img.shields.io/badge/Express.js-4.x-lightgrey?logo=express)
+![MySQL](https://img.shields.io/badge/MySQL-8.x-blue?logo=mysql)
 ![EJS](https://img.shields.io/badge/EJS-3.x-orange?logo=ejs)
-![npm](https://img.shields.io/badge/npm-10.x-red?logo=npm)
-![GitHub last commit](https://img.shields.io/github/last-commit/mohnish-srshetty/Library-Mangement-System)
-![GitHub issues](https://img.shields.io/github/issues/mohnish-srshetty/Library-Mangement-System)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/mohnish-srshetty/Library-Mangement-System)
-![GitHub stars](https://img.shields.io/github/stars/mohnish-srshetty/Library-Mangement-System?style=social)
 
-# Library Management System
+A comprehensive web-based Library Management System built with Node.js, Express, and MySQL. This application streamlines library operations, allowing for efficient management of books, users, and borrowing records.
 
-A web-based Library Management System built with Node.js and EJS templates. This application allows users to manage books, users, borrowings, and book copies efficiently.
+## 📸 UI Preview
 
-## Features
+### Home Page
+![Home Page Placeholder](https://placehold.co/800x400?text=Home+Page+Screenshot)
+*The main landing page providing quick access to all features.*
 
-- **Book Management:** Add, view, and update book copies.
-- **User Management:** Register new users and manage user data.
-- **Borrowing System:** Borrow and return books, track borrowings.
-- **Search Functionality:** Search for books and users.
-- **Authentication:** User login and registration.
-- **Responsive UI:** Simple HTML and EJS-based interface.
+### User Management
+![User Management Placeholder](https://placehold.co/800x400?text=User+Management+Screenshot)
+*Manage library members, view borrowing history, and update user details.*
 
-## Folder Structure
+### Book Inventory
+![Book Inventory Placeholder](https://placehold.co/800x400?text=Book+Inventory+Screenshot)
+*View, add, and update book copies in the library catalog.*
 
-```
-Library Mangement System/
-├── bookcopies.ejs         # EJS template for displaying book copies
-├── borrowbook.html        # HTML page for borrowing books
-├── borrowings.ejs         # EJS template for borrowings list
-├── connection.js          # Database connection logic
-├── home.html              # Main landing page
-├── index.js               # Main server file (Node.js/Express)
-├── login.html             # User login page
-├── newuser.html           # User registration page
-├── package.json           # Project metadata and dependencies
-├── search.ejs             # EJS template for search results
-├── table.ejs              # EJS template for displaying tables
-├── tempCodeRunnerFile.js  # Temporary file for code runner
-├── update_copy.ejs        # EJS template for updating book copies
-└── users.ejs              # EJS template for user list
-```
+### Borrow & Return
+![Borrowing System Placeholder](https://placehold.co/800x400?text=Borrowing+System+Screenshot)
+*Streamlined process for issuing and returning books.*
 
-## Getting Started
+---
+
+## ✨ Features
+
+-   **📚 Book Management**: add new books, update copies, and view detailed information.
+-   **👥 User Management**: Register new users, update profiles, and manage permissions.
+-   **🔄 Borrowing System**: Track borrowed books, due dates, and return status.
+-   **🔍 Advanced Search**: Find books by title, author, genre, or ISBN.
+-   **🔐 Authentication**: Secure user login and registration system.
+-   **RESPONSIVE UI**: Clean and intuitive interface built with EJS templates.
+
+## 🛠️ Tech Stack
+
+-   **Backend**: Node.js, Express.js
+-   **Database**: MySQL (using `mysql2` driver)
+-   **Templating**: EJS (Embedded JavaScript)
+-   **Environment Management**: `dotenv`
+
+## 🚀 Getting Started
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org/) (v14 or above recommended)
-- [npm](https://www.npmjs.com/)
+-   [Node.js](https://nodejs.org/) (v14 or higher)
+-   [MySQL Server](https://dev.mysql.com/downloads/mysql/)
 
 ### Installation
 
-1. **Clone the repository:**
-   ```sh
-   git clone https://github.com/<your-username>/<your-repo-name>.git
-   cd "Library Mangement System"
-   ```
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/mohnish-srshetty/Library-Mangement-System.git
+    cd Library-Mangement-System
+    ```
 
-2. **Install dependencies:**
-   ```sh
-   npm install
-   ```
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+    *(Refer to `requirements.txt` or `package.json` for version details)*
 
-3. **Configure the database:**
-   - Edit `connection.js` with your database credentials (e.g., MySQL, MongoDB, etc.).
-   - Ensure your database is running and accessible.
+3.  **Configure Database:**
+    -   Ensure your MySQL server is running.
+    -   Create the database and tables using the provided script:
+        ```bash
+        mysql -u root -p < setup_database.sql
+        ```
+    -   Create a `.env` file in the root directory and update your credentials:
+        ```env
+        DB_HOST=localhost
+        DB_USER=root
+        DB_PASS=your_password
+        DB_NAME=library_system
+        ```
 
-4. **Start the server:**
-   ```sh
-   node index.js
-   ```
-   The server will start on the port specified in `index.js` (commonly `6174`).
+4.  **Start the Application:**
+    ```bash
+    npm start
+    ```
+    The server will start on port `6174`.
 
-5. **Access the application:**
-   - Open your browser and go to `http://localhost:6174`
+5.  **Access the App:**
+    Open your browser and navigate to: [http://localhost:6174](http://localhost:6174)
 
-## Usage
+## 📂 Project Structure
 
-- **Home Page:** Overview and navigation.
-- **Login/Register:** Authenticate or create a new user.
-- **Borrow Books:** Select books to borrow and manage borrowings.
-- **Manage Users:** View and update user information.
-- **Manage Books:** Add new books, update copies, and view book details.
-- **Search:** Find books or users by keywords.
+```
+Library-Mangement-System/
+├── connection.js          # Database connection configuration
+├── index.js               # Main application entry point
+├── package.json           # Project dependencies and scripts
+├── requirements.txt       # List of dependencies (version locked)
+├── setup_database.sql     # SQL script for database initialization
+├── views/                 # EJS templates (implied structure)
+│   ├── home.html          # Landing page
+│   ├── users.ejs          # User list view
+│   ├── borrowings.ejs     # Borrowing history view
+│   └── ...
+└── ...
+```
 
-## Technologies Used
+## 🤝 Contributing
 
-- **Node.js**: Backend runtime
-- **Express.js**: Web framework
-- **EJS**: Templating engine for dynamic HTML
-- **HTML/CSS**: Frontend structure and styling
-- **Database**: (Specify your DB, e.g., MySQL, MongoDB)
+Contributions are welcome! Please fork the repository and submit a pull request for any enhancements or bug fixes.
 
-## Contributing
-
-Contributions are welcome! Please fork the repository and submit a pull request.
-
-## License
+## 📄 License
 
 This project is licensed under the MIT License.
 
-## Author
+## 👤 Author
 
-- [Mohnish S Shetty](https://github.com/mohnish-srshett)
-
+-   [Mohnish S Shetty](https://github.com/mohnish-srshetty)

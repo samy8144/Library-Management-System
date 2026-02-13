@@ -1,3 +1,4 @@
+require('dotenv').config();
 var con=require('./connection')
 var express=require('express');
 var app=express();
