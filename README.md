@@ -10,21 +10,19 @@ A comprehensive web-based Library Management System built with Node.js, Express,
 
 ## 📸 UI Preview
 
-### Home Page
-![Home Page Placeholder](https://placehold.co/800x400?text=Home+Page+Screenshot)
-*The main landing page providing quick access to all features.*
+### Borrow Books
+![Borrow Books](ui%20ss/borrow%20books.bmp)
+*Streamlined process for issuing and returning books.*
 
 ### User Management
-![User Management Placeholder](https://placehold.co/800x400?text=User+Management+Screenshot)
+![User Management](ui%20ss/users.bmp)
 *Manage library members, view borrowing history, and update user details.*
 
 ### Book Inventory
-![Book Inventory Placeholder](https://placehold.co/800x400?text=Book+Inventory+Screenshot)
+![Book Inventory](ui%20ss/books.bmp)
 *View, add, and update book copies in the library catalog.*
 
-### Borrow & Return
-![Borrowing System Placeholder](https://placehold.co/800x400?text=Borrowing+System+Screenshot)
-*Streamlined process for issuing and returning books.*
+
 
 ---
 
@@ -55,7 +53,7 @@ A comprehensive web-based Library Management System built with Node.js, Express,
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/mohnish-srshetty/Library-Mangement-System.git
+    git clone https://github.com/samy8144/Library-Management-System.git
     cd Library-Mangement-System
     ```
 
@@ -113,6 +111,3 @@ Contributions are welcome! Please fork the repository and submit a pull request 
 
 This project is licensed under the MIT License.
 
-## 👤 Author
-
--   [Mohnish S Shetty](https://github.com/mohnish-srshetty)
