@@ -28,15 +28,15 @@ A comprehensive web-based **Library Management System** designed to digitize and
 Below are screenshots of the fully functional Library Management System:
 
 ### Borrow Books Interface
-![Borrow Books](ui%20ss/borrow%20books.bmp)
+![Borrow Books](ui%20ss/borrow-books.png)
 *Streamlined process for issuing and returning books with automatic due date calculation (15-day loan period).*
 
 ### User Management Dashboard
-![User Management](ui%20ss/users.bmp)
+![User Management](ui%20ss/users.png)
 *Manage library members, view complete borrowing history, and update user details with role-based access.*
 
 ### Book Inventory Management
-![Book Inventory](ui%20ss/books.bmp)
+![Book Inventory](ui%20ss/books.png)
 *View, add, edit, and track book copies in the library catalog with real-time availability status.*
 
 
